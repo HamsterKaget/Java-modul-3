@@ -32,7 +32,7 @@ public class tokobuku {
         jml_item_brg++;
         }else { System.out.print("Tidak Beli Pensil 2B"); }
 
-        System.out.println("=========================");
+        System.out.println("\n =========================");
         System.out.print("Beli Pensil 2B : "+a+" \nBuah Harga : "+pensil);
         System.out.println("\n =========================");
         
@@ -47,7 +47,7 @@ public class tokobuku {
             jml_item_brg++;
         }else { System.out.print("Tidak Beli Pulpen"); }
         
-        System.out.println("=========================");
+        System.out.println("\n =========================");
         System.out.print("Beli Pulpen : "+b+" \n Buah Harga : "+pulpen);
         System.out.println("\n =========================");
         
@@ -63,7 +63,7 @@ public class tokobuku {
             jml_item_brg++;
         }else { System.out.print("Tidak Beli Buku"); }
         
-        System.out.println("=========================");
+        System.out.println("\n =========================");
         System.out.print("Beli Buku : "+c+" \n Buah Harga : "+buku);
         double total_harga=pensil+pulpen+buku;
         System.out.println("\n =========================");
@@ -74,25 +74,35 @@ public class tokobuku {
         // Perhitungan Diskon Jumlah Item Barang
         double jumlah_buku = buku / 25000;
         int jumlah_itung = jml_item_brg / 3;
+        System.out.println("Jumlah Barang" + jumlah_itung);
+        System.out.println("Jumlah Barang Total " + jml_item_brg);
 
 
         if (total_harga > 1000000) {
             double discount = total_harga*1/100;
             total_harga = total_harga - discount;
+            System.out.println("\n * Selamat Kamu Mendapatkan Diskon Sebesar : " + discount + " *");
         }
-
+        
         if ( jumlah_buku > 3*12 ) {
             double discountBuku = buku*2/100;
             total_harga = total_harga - discountBuku; 
+            System.out.println("\n * Selamat Kamu Mendapatkan DiskonBuku Sebesar : " + discountBuku + " *");
         }
-
+        
         if ( jumlah_itung > 0 ) {
             double discountItem = jumlah_itung*500;
             total_harga = total_harga - discountItem; 
+            System.out.println("\n * Selamat Kamu Mendapatkan DiskonItem Sebesar : " + discountItem + " *");
         }
 
 
         // Perhitungan Diskon Total Harga Disini
+
+        
+
+
+
         System.out.print("Total Harga Barang Dibeli "+total_harga);
         }catch( IOException e ){
         System.out.println("Error!");
